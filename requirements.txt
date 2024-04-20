@@ -1,1 +1,7 @@
 ultralytics
+matplotlib
+opencv-python-headless
+Pillow
+streamlit
+temp
+torch >=1.7.0
