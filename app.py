@@ -1,34 +1,3 @@
-# Nan
-
-# import torch
-# import numpy as np
-# import pandas as pd
-# import streamlit as st
-# from ultralytics import YOLO
-# from PIL import Image
-
-# model = torch.load('8n-50ep.pt')
-
-# def Pred():    
-#     uploaded_file = st.file_uploader('Upload (Video,Image)',type = ['png', 'jpeg', 'jpg','mp4', 'mpeg', 'mov'])
-#     if uploaded_file is not None:
-#         file_type = uploaded_file.type.split('/')[0]
-#     # image file
-#     if file_type == 'image':
-#         st.image(uploaded_file, caption = 'This Image', use_column_width=True)
-
-#     # vido file
-#     elif file_type == 'video':
-#         st.video(uploaded_file, caption = 'This Video')
-
-# def streamlitapp():
-#     st.title('SafetyFall Alert')
-#     st.write('Upload here')
-#     Pred(model)
-#     # st.button('Detect')
-
-# FishFat
-
 import streamlit as st
 from PIL import Image
 from ultralytics import YOLO   
@@ -50,7 +19,6 @@ def ImgPre(m) :
         boxes = pred[0].boxes
         res_plotted = pred[0].plot()[:, :, ::-1]
         st.image(res_plotted, caption='Detected Image')
-
 
 def videoPre (m):
   uploaded_video = st.file_uploader( "Upload A Video", type=['mp4', 'mpeg', 'mov'])
@@ -93,6 +61,7 @@ def videoPre (m):
             output_video = open(outputpath, 'rb')
             output_video_bytes = output_video.read()
             st.video(output_video_bytes)      
+        
 def main() :
   st.title('Safety Fall Alert')
   st.writre('Know these situations before too late')
