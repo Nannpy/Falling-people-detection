@@ -64,7 +64,7 @@ def videoPre (m):
         
 def main() :
   st.title('Safety Fall Alert')
-  st.writre('Know these situations before too late')
+  st.write('Know these situations before too late')
   st.image('headpic.png', use_column_width=True)
   with st.sidebar:
     st.title("Option")
